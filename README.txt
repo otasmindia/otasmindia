@@ -18,6 +18,6 @@ PUBLISH:
 
 IMPORTANT BEFORE PUBLISHING:
 - Confirm the service categories and descriptions on services.html. They are provisional draft copy because the company's exact service portfolio has not yet been supplied.
-- The contact page uses otasmsupport@gmail.com and +91 89834 15615.
+- The contact page uses otasmsupport@gmail.com and +91 96072 10228.
 - The logo is represented by a simple text mark in this starter. Replace it with the approved OTASM logo asset if you have the original logo file.
 - Add your verified legal/company details and any privacy notice required for your actual enquiry process.

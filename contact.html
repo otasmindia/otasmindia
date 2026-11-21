@@ -1,6 +1,109 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Contact OTASM Innovations and Services LLP in Pune, India."><title>OTASM | Contact Us</title><link rel="stylesheet" href="styles.css"></head><body>
-<header class="site-header"><a class="brand" href="index.html"><img class="site-logo" src="OTASM_logo.png" alt="OTASM Innovations and Services LLP"></a><button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button><nav class="nav"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html">Services</a><a class="active" href="contact.html">Contact Us</a></nav></header>
-<main><section class="page-hero"><p class="eyebrow">CONTACT US</p><h1>Let’s start a<br><span>conversation.</span></h1><p class="lead">Share your requirement, ask a question or tell us about a project you have in mind.</p></section>
-<section class="section contact-layout"><div><p class="eyebrow">REACH OTASM</p><h2>We’d like to hear from you.</h2><p>For business enquiries and general questions, please contact us using the details below.</p></div><div class="contact-card"><div class="contact-item"><span class="contact-label">EMAIL</span><a href="mailto:info@otasmindia.com">info@otasmindia.com</a></div><div class="contact-item"><span class="contact-label">PHONE</span><a href="tel:+919607210228">+91 96072 10228</a></div><div class="contact-item"><span class="contact-label">LOCATION</span><p>Pune, Maharashtra, India</p></div><a class="btn primary" href="mailto:info@otasmindia.com?subject=Business%20Enquiry%20-%20OTASM">Send an email →</a></div></section></main>
-<footer><div class="footer-brand"><img class="footer-logo" src="OTASM_logo.png" alt="OTASM Innovations and Services LLP"></div><p>Creating sustainable and reliable solutions.</p><div class="footer-bottom"><span>© <span id="year"></span> OTASM Innovations and Services LLP</span><span>Pune, Maharashtra, India</span></div></footer><script src="script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact OTASM Innovations and Services LLP in Pune, India.">
+  <title>Contact Us | OTASM Innovations and Services LLP</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Match the shared page layout, header, navigation and footer used on services.html */
+    .site-header{width:100%;min-height:100px;box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:28px;padding:8px max(32px, calc((100% - 1440px) / 2));background:#fff;border-bottom:1px solid #e8edf2}
+    .site-logo{display:block;width:auto;max-width:min(300px,55vw);height:78px;object-fit:contain;object-position:left center}
+    .nav{display:flex;align-items:center;justify-content:flex-end;gap:clamp(16px,2.2vw,32px)}
+    .nav a{color:#243447;text-decoration:none;font-weight:600;font-size:15px;padding:10px 2px;transition:color .2s ease,background .2s ease}
+    .nav a:hover{color:#0876b9}
+    .nav a.active{color:#0876b9;background:#eef7fc;border-radius:7px;padding:10px 14px}
+    .menu-toggle{display:none}
+    main{width:100%;max-width:none;box-sizing:border-box}
+    .page-hero{width:100%;max-width:none;margin:0;box-sizing:border-box;padding:clamp(54px,7vw,100px) clamp(40px,8vw,128px) clamp(38px,5vw,68px);background:linear-gradient(115deg,#071b35,#103e5b);color:#fff}
+    .page-hero h1{color:#fff}
+    .page-hero h1 span{color:#74d6c0}
+    .page-hero .lead{max-width:1000px;color:#c6d2df}
+    .section{width:calc(100% - clamp(40px,8vw,128px));max-width:none;margin-left:auto;margin-right:auto}
+    footer{width:100%;box-sizing:border-box;padding-left:clamp(20px,4vw,64px);padding-right:clamp(20px,4vw,64px)}
+    .footer-bottom{width:100%;max-width:none}
+    .footer-logo{height:72px;width:auto;max-width:250px;object-fit:contain}
+    .contact-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:stretch;gap:clamp(28px,5vw,80px);padding-top:clamp(54px,7vw,90px);padding-bottom:clamp(56px,7vw,96px)}
+    .contact-layout>div{min-width:0}
+    .contact-card{width:100%;box-sizing:border-box;padding:clamp(26px,3.5vw,48px)}
+    .contact-item{margin-bottom:26px}
+    .contact-item a,.contact-item p{overflow-wrap:anywhere}
+    @media(max-width:760px){
+      .site-header{min-height:86px;padding:8px 18px;flex-wrap:wrap}
+      .site-logo{height:66px;max-width:65vw}
+      .menu-toggle{display:block}
+      .nav{width:100%;flex-wrap:wrap;justify-content:flex-start;gap:8px 18px}
+      .page-hero{width:100%;padding-left:18px;padding-right:18px}.section{width:calc(100% - 36px)}
+      .contact-layout{grid-template-columns:1fr;gap:24px}
+      footer{padding-left:18px;padding-right:18px}
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="OTASM Innovations and Services LLP home">
+      <img class="site-logo" src="OTASM_logo.png" alt="OTASM Innovations and Services LLP">
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a class="active" href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">CONTACT US</p>
+      <h1>Let’s start a<br><span>conversation.</span></h1>
+      <p class="lead">Share your requirement, ask a question or tell us about a project you have in mind.</p>
+    </section>
+
+    <section class="section contact-layout">
+      <div>
+        <p class="eyebrow">REACH OTASM</p>
+        <h2>We’d like to hear from you.</h2>
+        <p>For business enquiries and general questions, please contact us using the details below.</p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-item">
+          <span class="contact-label">EMAIL</span>
+          <a href="mailto:info@otasmindia.com">info@otasmindia.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">PHONE</span>
+          <a href="tel:+919607210228">+91 96072 10228</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">LOCATION</span>
+          <p>Pune, Maharashtra, India</p>
+        </div>
+        <a class="btn primary" href="mailto:info@otasmindia.com?subject=Business%20Enquiry%20-%20OTASM">Send an email →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">
+      <img class="footer-logo" src="OTASM_logo.png" alt="OTASM Innovations and Services LLP">
+    </div>
+    <p>Creating sustainable and reliable solutions.</p>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> OTASM Innovations and Services LLP</span>
+      <span>Pune, Maharashtra, India</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const toggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".nav");
+    toggle.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", String(isOpen));
+    });
+  </script>
+</body>
+</html>

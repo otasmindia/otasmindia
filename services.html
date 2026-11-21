@@ -6,6 +6,85 @@
   <meta name="description" content="Explore OTASM Innovations and Services LLP's embedded product development, smart connected systems, and control and automation services.">
   <title>Our Services | OTASM Innovations and Services LLP</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .site-header {
+      height: auto;
+      min-height: 110px;
+      padding: 8px max(32px, calc((100% - 1440px) / 2));
+    }
+
+    .site-logo {
+      height: 90px;
+    }
+
+    .page-hero {
+      box-sizing: border-box;
+      width: calc(100% - 64px);
+      max-width: none;
+      margin: 0 auto;
+      padding-top: clamp(56px, 8vw, 96px);
+      padding-bottom: clamp(48px, 6vw, 72px);
+    }
+
+    .page-hero > .eyebrow {
+      font-size: clamp(14px, 1.1vw, 16px);
+      letter-spacing: 0.12em;
+    }
+
+    main {
+      width: 100%;
+    }
+
+    main > .section {
+      box-sizing: border-box;
+      width: calc(100% - 64px);
+      max-width: none;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: clamp(36px, 5vw, 56px);
+      padding-bottom: clamp(36px, 5vw, 56px);
+    }
+
+    main > .section > h2,
+    main > .section > .eyebrow,
+    main > .section > .lead {
+      max-width: 1100px;
+    }
+
+    main > .section > div:not(.service-grid) {
+      max-width: 900px;
+    }
+
+    main > .section p {
+      line-height: 1.75;
+    }
+
+    @media (max-width: 760px) {
+      .site-header {
+        min-height: 96px;
+        padding: 8px 18px;
+        flex-wrap: wrap;
+      }
+
+      .site-logo {
+        height: 76px;
+      }
+
+      .site-header .nav {
+        top: 95px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .page-hero {
+        width: calc(100% - 36px);
+      }
+
+      main > .section {
+        width: calc(100% - 36px);
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -24,19 +103,15 @@
   <main>
     <section class="page-hero">
       <p class="eyebrow">WHAT WE DO</p>
-      <h1>Engineering ideas into <span>intelligent solutions.</span></h1>
+      <h1>Engineering ideas into<br><span>intelligent solutions.</span></h1>
       <p class="lead">We bring together embedded engineering, connected technologies and industrial control expertise to help turn complex requirements into dependable products and systems.</p>
     </section>
 
     <section class="section">
-      <div class="intro">
-        <div>
-          <p class="eyebrow">OUR SERVICES</p>
-          <h2>From product development to intelligent automation</h2>
-        </div>
-        <div>
-          <p>OTASM supports the development of electronic products and smart industrial solutions across hardware, software and system integration. Our work combines practical engineering with a focus on performance, reliability and real-world application.</p>
-        </div>
+      <p class="eyebrow">OUR SERVICES</p>
+      <h2>From product development to intelligent automation</h2>
+      <div>
+        <p>OTASM supports the development of electronic products and smart industrial solutions across hardware, software and system integration. Our work combines practical engineering with a focus on performance, reliability and real-world application.</p>
       </div>
 
       <div class="service-grid" style="margin-top:42px">

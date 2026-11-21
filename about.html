@@ -6,6 +6,314 @@
   <meta name="description" content="Learn about OTASM Innovations and Services LLP and its embedded engineering and technology capabilities.">
   <title>OTASM | About Us</title>
   <link rel="stylesheet" href="styles.css">
+<style>
+
+    /* Shared OTASM header and navigation styling */
+    .site-header {
+      box-sizing: border-box;
+      width: 100%;
+      min-height: 88px;
+      padding: 14px max(32px, calc((100% - 1440px) / 2));
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      background: #ffffff;
+      border-bottom: 1px solid rgba(20, 40, 60, 0.10);
+    }
+    .site-header .brand {
+      display: inline-flex;
+      align-items: center;
+      flex: 0 0 auto;
+      text-decoration: none;
+      min-width: 0;
+    }
+    .site-header .site-logo {
+      display: block;
+      width: auto;
+      height: 58px;
+      max-width: min(220px, 28vw);
+      object-fit: contain;
+      object-position: left center;
+    }
+    .site-header .nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+      flex-wrap: nowrap;
+    }
+    .site-header .nav a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 17px;
+      border-radius: 7px;
+      color: #26384a;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background-color .2s ease, color .2s ease;
+    }
+    .site-header .nav a:hover,
+    .site-header .nav a.active {
+      color: #0b5d83;
+      background: #edf5f8;
+    }
+    .site-header .nav a:last-child {
+      margin-left: 6px;
+      padding: 0 21px;
+      color: #ffffff;
+      background: #0b5d83;
+      border: 1px solid #0b5d83;
+    }
+    .site-header .nav a:last-child:hover {
+      color: #ffffff;
+      background: #084765;
+      border-color: #084765;
+    }
+    .site-header .menu-toggle {
+      display: none;
+    }
+    @media (max-width: 760px) {
+      .site-header {
+        min-height: 74px;
+        padding: 10px 18px;
+        gap: 14px;
+      }
+      .site-header .site-logo {
+        height: 48px;
+        max-width: 190px;
+      }
+      .site-header .menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border: 1px solid rgba(20, 40, 60, .18);
+        border-radius: 7px;
+        background: #ffffff;
+        color: #17384c;
+        font-size: 22px;
+        cursor: pointer;
+      }
+      .site-header .nav {
+        gap: 4px;
+      }
+    }
+    @media (max-width: 560px) {
+      .site-header {
+        flex-wrap: wrap;
+      }
+      .site-header .nav {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        gap: 3px;
+      }
+      .site-header .nav a {
+        min-height: 38px;
+        padding: 0 9px;
+        font-size: 12px;
+      }
+      .site-header .nav a:last-child {
+        margin-left: 0;
+        padding: 0 11px;
+      }
+    }
+
+    /* About page: consistent alignment and responsive spacing */
+    main { width: 100%; }
+    .page-hero,
+    main > .section,
+    main > .cta {
+      box-sizing: border-box;
+      width: min(100% - 48px, 1320px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .page-hero {
+      padding-top: clamp(56px, 8vw, 96px);
+      padding-bottom: clamp(48px, 6vw, 72px);
+    }
+    main > .section {
+      padding-top: clamp(36px, 5vw, 56px);
+      padding-bottom: clamp(36px, 5vw, 56px);
+    }
+    main > .section > h2,
+    main > .section > .eyebrow,
+    main > .section > .lead {
+      max-width: 1100px;
+    }
+    main > .section > div:not(.service-grid) {
+      max-width: 900px !important;
+    }
+    main > .section p {
+      line-height: 1.75;
+    }
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      width: 100%;
+      align-items: stretch;
+      margin-top: 28px;
+    }
+    .service-card {
+      box-sizing: border-box;
+      height: 100%;
+      padding: clamp(22px, 3vw, 32px);
+      min-width: 0;
+    }
+    .service-card h2,
+    .service-card h3 {
+      line-height: 1.3;
+      margin-top: 14px;
+    }
+    .service-card p {
+      line-height: 1.7;
+    }
+    main > .section:nth-of-type(4) .service-grid {
+      grid-template-columns: minmax(0, 1fr);
+      max-width: 560px;
+    }
+    main > .section:nth-of-type(4) .service-card img {
+      margin-top: 22px !important;
+    }
+    main > .cta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      padding: clamp(28px, 4vw, 48px);
+      margin-top: 24px;
+      margin-bottom: 64px;
+    }
+    footer {
+      width: 100%;
+      box-sizing: border-box;
+    }
+    footer > * {
+      max-width: 1320px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .footer-bottom {
+      box-sizing: border-box;
+      width: min(100% - 48px, 1320px);
+    }
+    @media (max-width: 700px) {
+      .page-hero,
+      main > .section,
+      main > .cta {
+        width: min(100% - 36px, 1320px);
+      }
+      .service-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+      }
+      main > .section:nth-of-type(4) .service-grid {
+        max-width: none;
+      }
+      main > .cta {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+      .footer-bottom {
+        width: calc(100% - 36px);
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+    }
+
+    /* Full-width desktop layout overrides */
+    .site-header {
+      padding-left: max(32px, calc((100% - 1440px) / 2));
+      padding-right: max(32px, calc((100% - 1440px) / 2));
+    }
+    main {
+      width: 100%;
+      max-width: none;
+    }
+    .page-hero,
+    main > .section,
+    main > .cta {
+      width: calc(100% - 64px) !important;
+      max-width: none !important;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    main > .section > div,
+    main > .section > p,
+    main > .section > h2,
+    main > .section > .eyebrow,
+    main > .section > .lead {
+      width: 100%;
+      max-width: none !important;
+    }
+    .service-grid {
+      width: 100%;
+      max-width: none !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    main > .section:nth-of-type(4) .service-grid {
+      max-width: none !important;
+    }
+    footer > * {
+      width: calc(100% - 64px);
+      max-width: none !important;
+    }
+    .footer-bottom {
+      width: calc(100% - 64px) !important;
+      max-width: none !important;
+    }
+    @media (max-width: 700px) {
+      .site-header {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+      .page-hero,
+      main > .section,
+      main > .cta {
+        width: calc(100% - 36px) !important;
+      }
+      main > .section > div,
+      main > .section > p,
+      main > .section > h2,
+      main > .section > .eyebrow,
+      main > .section > .lead {
+        width: 100%;
+      }
+      .service-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      footer > *,
+      .footer-bottom {
+        width: calc(100% - 36px) !important;
+      }
+    }
+
+
+    /* Emphasize the Who We Are and Leadership section labels */
+    main > .section:nth-of-type(1) > .eyebrow,
+    main > .section:nth-of-type(3) > .eyebrow {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      line-height: 1.35;
+    }
+    @media (max-width: 700px) {
+      main > .section:nth-of-type(1) > .eyebrow,
+      main > .section:nth-of-type(3) > .eyebrow {
+        font-size: 18px;
+      }
+    }
+
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -29,32 +337,9 @@
     <section class="section">
       <p class="eyebrow">WHO WE ARE</p>
       <h2>Driving innovation through embedded engineering.</h2>
-      <div style="max-width: 900px; width: 100%;">
+      <div style="max-width: 1100px; width: 100%;">
         <p>We believe successful product engineering begins with a clear understanding of the application. We work to translate requirements into practical system solutions, balancing performance, reliability, integration and long-term maintainability.</p>
         <p>Our goal is to be a dependable engineering partner—supporting customers as they develop new products, enhance existing systems and address evolving technology requirements.</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <p class="eyebrow">OUR TECHNICAL FOCUS</p>
-      <h2>Core technologies. Connected engineering.</h2>
-      <p class="lead">We bring complementary embedded technologies together to create complete, reliable product solutions.</p>
-      <div class="service-grid">
-        <article class="service-card">
-          <span class="service-no">01 / CONNECTED INTELLIGENCE</span>
-          <h3>Sensing, IoT &amp; Edge AI</h3>
-          <p>Sensor technologies, connected devices, industrial communication and edge intelligence for smarter, data-driven applications.</p>
-        </article>
-        <article class="service-card">
-          <span class="service-no">02 / EMBEDDED PLATFORMS</span>
-          <h3>Firmware, RTOS &amp; Embedded Linux</h3>
-          <p>Embedded firmware and software platforms designed for responsive operation, dependable performance and seamless system integration.</p>
-        </article>
-        <article class="service-card">
-          <span class="service-no">03 / CONTROL &amp; AUTOMATION</span>
-          <h3>Motor Control &amp; Industrial Automation</h3>
-          <p>Embedded control and automation capabilities for motor-driven systems, equipment and industrial applications.</p>
-        </article>
       </div>
     </section>
 
@@ -75,7 +360,6 @@
 
     <section class="section">
       <p class="eyebrow">OUR LEADERSHIP</p>
-      <h2>Meet our founder.</h2>
       <div class="service-grid">
         <article class="service-card">
           <span class="service-no">FOUNDER</span>

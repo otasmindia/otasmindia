@@ -320,6 +320,50 @@
       }
     }
 
+  
+    /* Mobile navigation: keep Home, About, Services and Contact in one row */
+    @media (max-width: 760px) {
+      .site-header {
+        height: auto;
+        min-height: 96px;
+        flex-wrap: wrap;
+        row-gap: 6px;
+      }
+      .site-header .menu-toggle {
+        display: none !important;
+      }
+      .site-header .nav,
+      .site-header .nav.open {
+        display: flex !important;
+        position: static;
+        width: 100%;
+        flex-direction: row !important;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2px;
+        padding: 0 0 6px;
+        border: 0;
+        background: transparent;
+      }
+      .site-header .nav a {
+        flex: 1 1 0;
+        min-width: 0;
+        min-height: 38px;
+        padding: 0 4px;
+        font-size: clamp(10px, 2.8vw, 12px);
+        text-align: center;
+        white-space: nowrap;
+      }
+    }
+    @media (max-width: 360px) {
+      .site-header .nav a {
+        font-size: 10px;
+        padding-left: 2px;
+        padding-right: 2px;
+      }
+    }
+
   </style>
 
   <link rel="canonical" href="https://www.otasmindia.com/about.html">
